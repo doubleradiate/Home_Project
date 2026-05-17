@@ -1,0 +1,17 @@
+semantic_map_node:
+  ros__parameters:
+    use_sim_time: false
+    detection_topic: "/grounding_dino/detections"
+    depth_topic: "/realsense/depth"
+    camera_info_topic: "/realsense/camera_info"
+    amcl_topic: "/amcl_pose"
+    camera_frame: "Camera_OmniVision_OV9782_Color"
+    map_frame: "map"
+    merge_distance: 0.5
+    ema_alpha: 0.3
+    min_confidence: 0.35
+    depth_scale: 0.001        # 16UC1 mm → m；若深度影像已是公尺 (32FC1) 請改為 1.0
+    depth_window: 2           # 深度取樣視窗半徑 (pixels)
+    map_save_path: "/home/hungyu/work_ws/semantic_map.json"
+    auto_save_interval: 30.0
+    publish_rate: 2.0
